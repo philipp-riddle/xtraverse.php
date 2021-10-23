@@ -1,0 +1,29 @@
+{
+    "name": "phiil/xtraverse",
+    "description": "PHP bundle wich makes array traversing / inserting dead easy.",
+    "keywords": ["traverse", "nested objects", "tree"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Philipp Martini",
+            "email": "philipp@riddle.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phiil\\XTraverse\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Phiil\\XTraverse\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "phpunit/phpunit": "^9"
+    }
+}
