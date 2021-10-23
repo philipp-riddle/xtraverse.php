@@ -2,6 +2,14 @@
 
 This bundle makes it dead easy to traverse through nested arrays/objects in PHP. 
 
+## Installation
+### Via Composer
+```terminal
+composer require phiil/xtraverse
+```
+### File download
+To use all the functions of this package simply download the ```src/``` directory.
+
 ## Getting started
 
 ### Traversing paths
@@ -30,7 +38,10 @@ $traverseService = new TraverseService();
 $nodes = $traverseService->getNodes($path); // this function will split up the path by its steps (explode by '.')
 ```
 
-Every step is delimited with a dot ('.') and if you want to query for an ID simply append it to the path with closed brackets. Now let the traversing begin:
+Every step is delimited with a dot ('.').  
+If you want to query for an ID simply append it to the path with closed brackets.  
+  
+Now let the traversing begin:
 
 ```php
 use Phiil\XTraverse\Service\TraverseService;
@@ -73,7 +84,7 @@ $data = $traverseService->update($object, 'blocks.$', $object);
 
 The object inside ```$data``` will now have the ID of 2 (First Block: ID 1).
 
-**Note:**: The ```path.$``` can be used if you want to add a block to a non-associative (only numeric keys) array.
+**Note:** The ```path.$``` can be used if you want to add a block to a non-associative (only numeric keys) array.
 
 ## Running tests
 
