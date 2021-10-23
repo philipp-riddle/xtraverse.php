@@ -65,8 +65,10 @@ use Phiil\XTraverse\Service\TraverseService;
 $updatePath = 'blocks[1].title';
 
 $traverseService = new TraverseService();
-$data = $traverseService->update($data, $path, 'New title');
+$data = $traverseService->update($data, $path, 'New title')->data;
 ```
+
+**Note:** The update method returns an object with the properties ```path```, ```data``` & ```insert```. Getting the data property from the object straight away is almost always the best option.
 
 ### Working with IDs
 The traverse service can auto-increment IDs - meaning if you insert a nested object like:
@@ -79,7 +81,7 @@ $object = [
     'title' => 'Second block',
 ];
 $traverseService = new TraverseService();
-$data = $traverseService->update($object, 'blocks.$', $object);
+$data = $traverseService->update($object, 'blocks.$', $object)->data;
 ```
 
 The object inside ```$data``` will now have the ID of 2 (First Block: ID 1).
