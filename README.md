@@ -28,7 +28,6 @@ $data = [
 ];
 ```
 
-Depending on the method you use of `Traverser` you either need
 Now we specify which element we want:
 ```php
 $path = 'blocks[1].title';
@@ -56,7 +55,7 @@ Updating a value also works with paths:
 ```php
 use Phiil\XTraverse\Traverser;
 
-// we want to update the title of the block we previously traversed to
+// We want to update the title of the block we previously traversed to
 $updatePath = 'blocks[1].title';
 
 $traverser = new Traverser();
